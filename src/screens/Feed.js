@@ -1,3 +1,4 @@
+// Feed Container
 import {FlatList} from 'react-native';
 import React, {useEffect, useState} from 'react';
 
@@ -10,6 +11,7 @@ const renderItem = ({item}) => {
 
 const Feed = () => {
   const [data, setData] = useState([]);
+  //Get data initially
   const getData = async () => {
     const pageCount = 10;
     await helpers
@@ -28,6 +30,7 @@ const Feed = () => {
   };
 
   const fetchMoreData = async () => {
+    //Get More Data when user scroll down
     const pageCount = 5;
     await helpers
       .getDataFromApi(`&per_page=${pageCount}&page=2`)

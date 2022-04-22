@@ -1,3 +1,4 @@
+// Single Feed Item (Card) Screen
 import {
   Text,
   TouchableOpacity,
