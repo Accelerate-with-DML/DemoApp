@@ -14,7 +14,7 @@ const height = Dimensions.get('window').height;
 const SingleFeedItem = ({item}) => {
   console.log(item, 'item');
   const navigation = useNavigation();
-  return ( 
+  return (
     <TouchableOpacity
       onPress={() => navigation.navigate('Redirect')}
       style={styles.card}>
