@@ -12,8 +12,7 @@ import {useNavigation} from '@react-navigation/native';
 const width = Dimensions.get('window').width;
 const height = Dimensions.get('window').height;
 
-const SingleFeedItem = ({item}) => {
-  console.log(item, 'item');
+const SingleFeedItem = React.memo(({item}) => {
   const navigation = useNavigation();
   return (
     <TouchableOpacity
@@ -30,7 +29,7 @@ const SingleFeedItem = ({item}) => {
       <Text style={styles.name}>{item.name}</Text>
     </TouchableOpacity>
   );
-};
+});
 
 const styles = StyleSheet.create({
   card: {
